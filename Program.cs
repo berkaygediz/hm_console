@@ -1,221 +1,98 @@
-﻿internal class Program
+﻿string calcu = "-calcu(int)";
+string help = "-help(string)";
+
+start:
+Console.WriteLine("****HM Console***");
+Console.WriteLine("Commands: " + calcu + " , " + help);
+
+#pragma warning disable CS8600
+string command = Console.ReadLine();
+#pragma warning restore CS8600
+
+if (command == calcu)
 {
-    private static void Main()
+    Console.WriteLine("**Calculator**");
+    string plus = "-hm plus";
+    string minus = "-hm minus";
+    string multi = "-hm multiplication";
+    string division = "-hm division";
+    string modulus = "-hm modulus";
+
+    Console.WriteLine("Commands:" + plus + " , " + minus + " , " + multi + " , " + division + " , " + modulus);
+#pragma warning disable CS8600
+    string cmd = Console.ReadLine();
+#pragma warning restore CS8600
+
+    if (cmd == plus)
     {
-        string hesapmakinasi = "-calcu(int)";
-        string yardim = "-help(string)";
-        Console.WriteLine("****SANAL ASISTAN***");
-        Console.WriteLine("Komutlar: " + hesapmakinasi + " , " + yardim);
-        string komut;
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-        komut = Convert.ToString(Console.ReadLine());
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+        Console.WriteLine("**ADDITION**");
+        int x = Convert.ToInt32(Console.ReadLine());
+        int y = Convert.ToInt32(Console.ReadLine());
+        int sum = x + y;
+        Console.WriteLine("Result: " + sum);
+    }
+    else if (cmd == minus)
+    {
+        Console.WriteLine("**MINUS**");
+        int x = Convert.ToInt32(Console.ReadLine());
+        int y = Convert.ToInt32(Console.ReadLine());
+        int sum = x - y;
+        Console.WriteLine("Result: " + sum);
+    }
+    else if (cmd == multi)
+    {
+        Console.WriteLine("**MULTIPLICATION**");
+        int x = Convert.ToInt32(Console.ReadLine());
+        int y = Convert.ToInt32(Console.ReadLine());
+        int sum = x * y;
+        Console.WriteLine("Result: " + sum);
+    }
+    else if (cmd == division)
+    {
+        Console.WriteLine("**DIVISION**");
+        int x = Convert.ToInt32(Console.ReadLine());
+        int y = Convert.ToInt32(Console.ReadLine());
 
-        if (komut == hesapmakinasi)
+        if (y != 0)
         {
-            Console.WriteLine("**HESAP MAKINASI**");
-            string toplama = "-hm toplama";
-            string cikarma = "-hm cikarma";
-            string carpma = "-hm carpma";
-            string bolme = "-hm bolme";
-            string modulus = "-hm modulus";
-            Console.WriteLine("İşlemler:" + toplama + " , " + cikarma + " , " + carpma + " , " + bolme + " , " + modulus);
-            string komuthm;
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-            komuthm = Convert.ToString(Console.ReadLine());
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-            if (komuthm == toplama)
-            {
-                Console.WriteLine("**TOPLAMA**");
-                int toplamasayi1;
-                int toplamasayi2;
-                int toplamatoplam;
-                Console.WriteLine();
-                Console.Write("1.Sayıyı giriniz: ");
-                toplamasayi1 = Convert.ToInt32(Console.ReadLine());
-                Console.Write("2.Sayıyı giriniz: ");
-                toplamasayi2 = Convert.ToInt32(Console.ReadLine());
-                toplamatoplam = toplamasayi1 + toplamasayi2;
-                Console.WriteLine("Sonuç: " + toplamatoplam);
-                Console.ReadLine();
-            }
-            if (komuthm == cikarma)
-            {
-                Console.WriteLine("**CIKARMA**");
-                int cikarmasayi1;
-                int cikarmasayi2;
-                int cikarmatoplam;
-                Console.WriteLine();
-                Console.WriteLine("1.Sayıyı giriniz: ");
-                cikarmasayi1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("2.Sayıyı giriniz: ");
-                cikarmasayi2 = Convert.ToInt32(Console.ReadLine());
-                cikarmatoplam = cikarmasayi1 - cikarmasayi2;
-                Console.WriteLine("Sonuç: " + cikarmatoplam);
-                Console.ReadLine();
-            }
-            if (komuthm == carpma)
-            {
-                Console.WriteLine("**CARPMA**");
-                int cikarmasayi1;
-                int cikarmasayi2;
-                int cikarmatoplam;
-                Console.WriteLine();
-                Console.Write("1.Sayıyı giriniz: ");
-                cikarmasayi1 = Convert.ToInt32(Console.ReadLine());
-                Console.Write("2.Sayıyı giriniz: ");
-                cikarmasayi2 = Convert.ToInt32(Console.ReadLine());
-                cikarmatoplam = cikarmasayi1 * cikarmasayi2;
-                Console.WriteLine("Sonuç: " + cikarmatoplam);
-            }
-            if (komuthm == bolme)
-            {
-                Console.WriteLine("**BOLME**");
-                int sayi1;
-                int sayi2;
-                int toplam;
-                Console.WriteLine();
-                Console.WriteLine("1.Sayıyı giriniz: ");
-                sayi1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("2.Sayıyı giriniz: ");
-                sayi2 = Convert.ToInt32(Console.ReadLine());
-                toplam = sayi1 / sayi2;
-                Console.WriteLine("Sonuç: " + toplam);
-                Console.Read();
-            }
-            if (komuthm == modulus)
-            {
-                Console.WriteLine("**MODULUS**");
-                int sayi1;
-                int sayi2;
-                int toplam;
-                Console.WriteLine("1.Sayıyı giriniz: ");
-                sayi1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("2.Sayıyı giriniz: ");
-                sayi2 = Convert.ToInt32(Console.ReadLine());
-
-                toplam = sayi1 % sayi2;
-                Console.WriteLine("Sonuç: " + toplam);
-                Console.Read();
-            }
-            else
-            {
-                Console.WriteLine("****SANAL ASISTAN***");
-                Console.WriteLine("Komutlar: " + hesapmakinasi + " , " + yardim);
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-                komut = Convert.ToString(Console.ReadLine());
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-                if (komut == hesapmakinasi)
-                {
-                    Console.WriteLine("**HESAP MAKINASI**");
-                    string toplama2 = "-hm toplama";
-                    string cikarma2 = "-hm cikarma";
-                    string carpma2 = "-hm carpma";
-                    string bolme2 = "-hm bolme";
-                    string modulus2 = "-hm modulus";
-                    Console.WriteLine("İşlemler:" + toplama + " , " + cikarma + " , " + carpma + " , " + bolme + " , " + modulus);
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-                    komuthm = Convert.ToString(Console.ReadLine());
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-                    if (komuthm == toplama2)
-                    {
-                        Console.WriteLine("**TOPLAMA**");
-                        int toplamasayi1;
-                        int toplamasayi2;
-                        int toplamatoplam;
-                        Console.WriteLine();
-                        Console.Write("1.Sayıyı giriniz: ");
-                        toplamasayi1 = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("2.Sayıyı giriniz: ");
-                        toplamasayi2 = Convert.ToInt32(Console.ReadLine());
-                        toplamatoplam = toplamasayi1 + toplamasayi2;
-                        Console.WriteLine("Sonuç: " + toplamatoplam);
-                        Console.ReadLine();
-                    }
-                    if (komuthm == cikarma2)
-                    {
-                        Console.WriteLine("**CIKARMA**");
-                        int cikarmasayi1;
-                        int cikarmasayi2;
-                        int cikarmatoplam;
-                        Console.WriteLine();
-                        Console.WriteLine("1.Sayıyı giriniz: ");
-                        cikarmasayi1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("2.Sayıyı giriniz: ");
-                        cikarmasayi2 = Convert.ToInt32(Console.ReadLine());
-                        cikarmatoplam = cikarmasayi1 - cikarmasayi2;
-                        Console.WriteLine("Sonuç: " + cikarmatoplam);
-                        Console.ReadLine();
-                    }
-                    if (komuthm == carpma2)
-                    {
-                        Console.WriteLine("**CARPMA**");
-                        int cikarmasayi1;
-                        int cikarmasayi2;
-                        int cikarmatoplam;
-                        Console.WriteLine();
-                        Console.Write("1.Sayıyı giriniz: ");
-                        cikarmasayi1 = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("2.Sayıyı giriniz: ");
-                        cikarmasayi2 = Convert.ToInt32(Console.ReadLine());
-                        cikarmatoplam = cikarmasayi1 * cikarmasayi2;
-                        Console.WriteLine("Sonuç: " + cikarmatoplam);
-                    }
-                    if (komuthm == bolme2)
-                    {
-                        Console.WriteLine("**BOLME**");
-                        int sayi1;
-                        int sayi2;
-                        int toplam;
-                        Console.WriteLine();
-                        Console.WriteLine("1.Sayıyı giriniz: ");
-                        sayi1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("2.Sayıyı giriniz: ");
-                        sayi2 = Convert.ToInt32(Console.ReadLine());
-                        toplam = sayi1 / sayi2;
-                        Console.WriteLine("Sonuç: " + toplam);
-                        Console.Read();
-                    }
-                    if (komuthm == modulus2)
-                    {
-                        Console.WriteLine("**MODULUS**");
-                        int sayi1;
-                        int sayi2;
-                        int toplam;
-                        Console.WriteLine("1.Sayıyı giriniz: ");
-                        sayi1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("2.Sayıyı giriniz: ");
-                        sayi2 = Convert.ToInt32(Console.ReadLine());
-                        toplam = sayi1 % sayi2;
-                        Console.WriteLine("Sonuç: " + toplam);
-                        Console.Read();
-                    }
-                    else
-                    {
-                        Console.WriteLine("****SANAL ASISTAN***");
-                        Console.WriteLine("Komutlar: " + hesapmakinasi + " , " + yardim);
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-                        komut = Convert.ToString(Console.ReadLine());
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-                    }
-                }
-                if (komut == yardim)
-                {
-                    Console.WriteLine("**YARDIM**");
-                    Console.WriteLine("Komutlar: " + hesapmakinasi + " , " + yardim);
-                }
-            }
-        }
-        if (komut == yardim)
-        {
-            Console.WriteLine("**YARDIM**");
-            Console.WriteLine("Komutlar: " + hesapmakinasi + " , " + yardim);
+            int sum = x / y;
+            Console.WriteLine("Result: " + sum);
         }
         else
         {
-            Console.WriteLine("Konsol İşlemi Sonlandırıldı.");
+            Console.WriteLine("Partition is invalid. Second number cannot be zero.");
         }
-        Console.Read();
     }
+    else if (cmd == modulus)
+    {
+        Console.WriteLine("**MODULUS**");
+        int x = Convert.ToInt32(Console.ReadLine());
+        int y = Convert.ToInt32(Console.ReadLine());
+
+        if (y != 0)
+        {
+            int sum = x % y;
+            Console.WriteLine("Result: " + sum);
+        }
+        else
+        {
+            Console.WriteLine("Modulus operation invalid. Second number cannot be zero.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid command. Please try again.");
+        goto start;
+    }
+    goto start;
+}
+else if (command == help)
+{
+    Console.WriteLine("**HELP**");
+    Console.WriteLine("Commands: " + calcu + " , " + help);
+}
+else
+{
+    Console.WriteLine("Invalid command. Please try again.");
+    goto start;
 }

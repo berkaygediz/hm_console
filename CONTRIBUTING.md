@@ -10,23 +10,23 @@ Thank you for considering contributing to the "HM Console" project. Your contrib
 
 ## Step-by-Step Contribution
 
-1. Fork this project's [GitHub repository](https://github.com/yourusername/hm-console) to your own GitHub account.
+1. Fork this project's [GitHub repository](https://github.com/berkaygediz/hm_console) to your own GitHub account.
 
 2. Clone the forked repository to your local machine:
 
-   ```
+   ```bash
    git clone https://github.com/berkaygediz/hm_console.git
    ```
 
 3. Navigate to the project's root directory:
 
-   ```
+   ```bash
    cd hm-console
    ```
 
 4. Create a new branch for your feature or bug fix, and name it descriptively:
 
-   ```
+   ```bash
    git checkout -b feature/new-feature
    ```
 
@@ -36,13 +36,13 @@ Thank you for considering contributing to the "HM Console" project. Your contrib
 
 7. Write a clear and concise commit message that describes your changes:
 
-   ```
+   ```bash
    git commit -m "Add new feature"
    ```
 
 8. Push your changes to your fork:
 
-   ```
+   ```bash
    git push origin feature/new-feature
    ```
 

@@ -1,40 +1,75 @@
-# HM Console - TypeScript Command Line Calculator
+# HM Console - C++ Command Line Calculator
 
-**HM Console** is a simple command-line application that allows users to perform calculator operations and get help with various commands. Users can perform addition, subtraction, multiplication, division, and modulus operations.
+**HM Console** is a simple C++ command-line application that allows users to perform basic calculator operations.
 
 ## Prerequisites
 
-Make sure you have Node.js and npm (Node Package Manager) installed on your computer.
+Ensure that you have a C++ compiler installed, such as GCC or Clang, to compile and run the application.
 
 ## Usage
 
-```bash
-cd hm-console
-```
+1. **Clone the repository:**
 
-```bash
-npx ts-node main.ts
-```
+   ```bash
+   git clone https://github.com/berkaygediz/hm_console.git
+   cd hm_console
+   ```
+
+2. **Compile the code:**
+
+   If you're using GCC or Clang, run:
+
+   ```bash
+   g++ main.cpp -o hm_console
+   ```
+
+3. **Run the program:**
+
+   ```bash
+   ./hm_console
+   ```
 
 ## Commands
 
-The following commands are available in HM Console:
+The following commands are available in the **HM Console**:
 
-- `-calcu(int)`: Access the calculator functionality.
-- `-help(string)`: Get assistance with available commands.
+- `calcu`: Access the calculator functionality.
+- `help`: Display a list of available commands and their descriptions.
 
-### Subcommands
+### Subcommands for Calculator
 
-- `-hm plus`: Perform addition.
-- `-hm minus`: Perform subtraction.
-- `-hm multiplication`: Perform multiplication.
-- `-hm division`: Perform division.
-- `-hm modulus`: Perform modulus operation.
+Once in the calculator mode, you can use the following subcommands:
 
-## Examples
+- `plus`: Perform addition.
+- `minus`: Perform subtraction.
+- `multiplication`: Perform multiplication.
+- `division`: Perform division.
+- `modulus`: Perform modulus operation.
+- `exit`: Exit from the calculator or program.
 
-- To access the calculator, enter `-calcu(int)` and follow the prompts.
-- To get help, enter `-help(string)`.
+### Example Use Case
+
+```plaintext
+------------------
+**HM_CONSOLE**
+Commands: calcu, help, exit
+Enter a command:
+calcu
+
+------------------
+**SUB-COMMANDS**
+Commands: plus, minus, multiplication, division, modulus, exit
+Enter a sub-command:
+plus
+
+**ADDITION**
+Enter the first number:
+5
+Enter the second number:
+3
+
+Result: 8
+```
 
 ## License
 
